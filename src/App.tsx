@@ -1,4 +1,7 @@
 import './App.css'
+import OneSignal from 'react-onesignal';
+import { useEffect } from 'react';
+
 
 
 const notify = () => {
@@ -30,6 +33,24 @@ const notify = () => {
 };
 
 function App() {
+ useEffect(() => {
+   try {
+     OneSignal.init({
+       appId: "36ff437d-eebb-4975-86fb-5ac1d63a6851",
+       safari_web_id: "web.onesignal.auto.170dfd78-50f3-4c48-aaba-810262274b60",
+       notifyButton: {
+         enable: true,
+       },
+     }).then(() => {
+       OneSignal.Debug.setLogLevel('trace');
+       OneSignal.login("rodrigo");
+       OneSignal.User.addAlias("myAlias", "1");
+     });
+   } catch (e) {
+     console.log(e);
+   }
+ }, []);
+
   return (
     <>
       <h4>Test notification</h4>
