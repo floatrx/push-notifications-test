@@ -13,11 +13,9 @@ const notify = () => {
       return;
     }
 
-    console.log(permission);
-
     const notification = new Notification('Hi there!', {
       body: 'I am here to talk about HTML5 Web Notification API',
-      icon: 'icon.png',
+      icon: 'favicon.png',
       dir: 'auto',
     });
 
