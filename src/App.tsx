@@ -1,7 +1,4 @@
 import './App.css'
-import OneSignal from 'react-onesignal';
-import { useState, useEffect } from 'react';
-import { ONESIGNAL_CONFIG } from './const.ts';
 
 
 const notify = () => {
@@ -35,19 +32,6 @@ const notify = () => {
 };
 
 function App() {
-  const [initialized, setInitialized] = useState(false);
-
-  useEffect(() => {
-    OneSignal.init(ONESIGNAL_CONFIG).then(() => {
-      setInitialized(true);
-      OneSignal.Slidedown.promptPush();
-      alert('OneSignal Initialized');
-      // do other stuff
-    })
-  }, []);
-
-  console.log('[onesignal] Initialized: ', initialized)
-
   return (
     <>
       <h4>Test notification</h4>
