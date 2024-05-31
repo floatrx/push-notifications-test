@@ -19,5 +19,5 @@ If you have **blocked** notifications, you can unblock them by clicking on the ð
 
 ### Test Push notifications using OneSignal:
 ![Test web notifications & push notifications (OneSignal)](public/onesignal.png)
-)
+
 
