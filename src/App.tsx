@@ -80,12 +80,18 @@ function App() {
         <img src="/request.png" alt="request permission"/>
       </div>
       <p>
-        Also check global system notifications (OSX):
+        Also check global system notifications (e.g. in OSX):
       </p>
       <img src="/notifications.png" alt="osx notifications"/>
       <p>
-        Check console.logs for debug info.
+        {'>>'} Check console.logs for debug info. {'<< '}
       </p>
+      <strong>
+        OneSignal push notifications final test.
+      </strong>
+      <img src="/onesignal.png" alt="onesignal"/>
+      <br/>
+      <a href="https://onesignal.com/">https://onesignal.com/</a>
     </main>
   );
 }
