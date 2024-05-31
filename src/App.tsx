@@ -35,7 +35,7 @@ const notify = () => {
     setTimeout(function () {
       notification.close();
     }, 2000);
-  });
+  }).then(console.log);
 };
 
 function App() {
@@ -54,6 +54,10 @@ function App() {
         OneSignal.Debug.setLogLevel('trace');
         OneSignal.login("rodrigo");
         OneSignal.User.addAlias("myAlias", "1");
+
+        OneSignal.Notifications.requestPermission().then((status) => {
+          console.log('Notification permission status:', status);
+        });
       });
     } catch (e) {
       console.log(e);
@@ -79,6 +83,9 @@ function App() {
         Also check global system notifications (OSX):
       </p>
       <img src="/notifications.png" alt="osx notifications"/>
+      <p>
+        Check console.logs for debug info.
+      </p>
     </main>
   );
 }
