@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Test web notifications & push notifications (OneSignal)
+Desktop only*! `Chrome` `Firefox` `Safari` `Edge`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mobile browsers do not support Web notifications only Push notifications.
 
-Currently, two official plugins are available:
+Visit https://test-pushes.vercel.app/ and click on the button to subscribe to push notifications. You will receive a push notification after subscribing. You can also test web notifications by clicking on the button to show a notification.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Allow Web notifications from site 
+e.g. `Arc Browser` pop-up:
 
-## Expanding the ESLint configuration
+![Allow notifications](public/request.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+If you have **blocked** notifications, you can unblock them by clicking on the 🔒 icon in the address bar or check the **site settings** in the browser.
 
-- Configure the top-level `parserOptions` property like this:
+### Check global settings 
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+(e.g. OSX: System Preferences → 🔔 Notifications)
+![Check system preferences](public/notifications.png)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Test Push notifications using OneSignal:
+![Test web notifications & push notifications (OneSignal)](public/onesignal.png)
+)
+
