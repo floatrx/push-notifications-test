@@ -62,12 +62,18 @@ function App() {
 
   return (
     <main className="main">
-      <h1>🔔 Test notification <button onClick={notify}>Test</button></h1>
+      <h5>🔔 Test web notifications
+        <br/>
+        <a href="https://github.com/floatrx/push-notifications-test">Source code here...</a>
+      </h5>
+      <p>
+        <button onClick={notify}>Show Notification!</button>
+      </p>
       <p>
         Request <strong>permission</strong> popup:
       </p>
       <div>
-         <img src="/request.png" alt="request permission"/>
+        <img src="/request.png" alt="request permission"/>
       </div>
       <p>
         Also check global system notifications (OSX):
